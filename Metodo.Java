@@ -1,10 +1,11 @@
 public class metodo {
-    public int [][] LlenarMatrizEntera(int[][]){
+    public int [][] LlenarMatrizEntera(int[][] matriz){
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                 matriz[i][j] = (int) (Math.random() * 50 + 1);
             }
         }
+        return matriz;
     }
      
     public void MostrarMatrizEntera(int[][] matriz){
@@ -17,6 +18,7 @@ public class metodo {
             }
         }
     }
+
 
 
 
@@ -36,5 +38,16 @@ public class metodo {
             for (int j = 0; j < matriz[i].length; j++) {
                 System.out.print(" - " + matriz[i][j].getDato());
             }    
-        }   
+        }
+        
+    public void imprimirDiagonalSuperior(ObjMatriz[][] matriz) {
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (i < j) {
+                    System.out.print(" - " + matriz[i][j].getDato());
+                }
+            }
+            System.out.println();
+        }
+    }
 }

@@ -15,6 +15,8 @@ public class Menu {
             System.out.println("2 Mostrar matriz enteros");
             System.out.println("3 llenar matriz de objetos");
             System.out.println("4 mostrar matriz 0");
+            System.out.println("5 mostrar matriz diagonal superior");
+            System.out.println("6 salir");
             int opcion = scanner.nextInt();
             switch (opcion) {
                 case 1:
@@ -30,9 +32,11 @@ public class Menu {
                     metodos.MostrarMatrizObjeto(matrizObjeto);
                     break;
                 case 5:
+                    metodos.imprimirDiagonalSuperior(matrizObjeto);
+                    break;
+                case 6:
                     System.out.println("Saliendo es saliendo");
                     continuar = false;
-                    break;
                 default:
                     System.out.println("Opción no válida");
                     break;
